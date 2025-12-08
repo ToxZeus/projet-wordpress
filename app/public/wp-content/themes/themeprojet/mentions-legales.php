@@ -2,7 +2,7 @@
 // Page Mentions légales personnalisée
 get_header();
 ?>
-<section>
+<section class="centered-section">
     <h2>Mentions légales</h2>
     <p>Ce site est édité par Groupe Hugo CHICHKINE.<br>
     Adresse : 123 rue du Projet, 75000 Paris<br>

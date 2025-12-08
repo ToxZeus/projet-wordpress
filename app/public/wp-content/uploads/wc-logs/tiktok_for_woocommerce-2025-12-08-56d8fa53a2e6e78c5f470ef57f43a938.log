@@ -770,3 +770,5 @@
 2025-12-08T16:13:10+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
 2025-12-08T16:14:21+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
 2025-12-08T16:14:21+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2025-12-08T16:22:44+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2025-12-08T16:22:44+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"

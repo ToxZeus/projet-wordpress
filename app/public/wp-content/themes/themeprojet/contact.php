@@ -2,7 +2,7 @@
 // Page Contact personnalisée
 get_header();
 ?>
-<section>
+<section class="centered-section">
     <h2>Contactez-nous</h2>
     <form>
         <label for="nom">Nom :</label>
