@@ -1,3 +1,79 @@
+/* Boutique artisanale évolutive */
+body {
+	background: #f7f3ee;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	color: #3e2c19;
+}
+.woocommerce ul.products {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: center;
+}
+.woocommerce ul.products li.product {
+	background: #fff8f0;
+	border-radius: 14px;
+	box-shadow: 0 2px 8px rgba(100,70,40,0.08);
+	padding: 1.7rem;
+	width: 290px;
+	border: 1px solid #e2c9a0;
+	transition: box-shadow 0.2s;
+}
+.woocommerce ul.products li.product:hover {
+	box-shadow: 0 4px 16px rgba(100,70,40,0.18);
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+	font-size: 1.25rem;
+	font-weight: bold;
+	margin-bottom: 0.7rem;
+	color: #a67c52;
+}
+.woocommerce ul.products li.product .price {
+	color: #d4a373;
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+.woocommerce ul.products li.product .button {
+	background: linear-gradient(90deg,#a67c52,#d4a373);
+	color: #fff;
+	border: none;
+	border-radius: 7px;
+	padding: 0.6rem 1.3rem;
+	font-weight: bold;
+	cursor: pointer;
+	margin-top: 1rem;
+	transition: background 0.2s;
+}
+.woocommerce ul.products li.product .button:hover {
+	background: linear-gradient(90deg,#d4a373,#a67c52);
+}
+.woocommerce div.product .variations select {
+	border-radius: 7px;
+	border: 1px solid #a67c52;
+	padding: 0.4rem;
+	margin-bottom: 1rem;
+	background: #fff8f0;
+	color: #3e2c19;
+}
+.woocommerce div.product .single_variation_wrap .price {
+	color: #d4a373;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.woocommerce div.product .single_add_to_cart_button {
+	background: linear-gradient(90deg,#a67c52,#d4a373);
+	color: #fff;
+	border: none;
+	border-radius: 7px;
+	padding: 0.8rem 1.6rem;
+	font-weight: bold;
+	cursor: pointer;
+	margin-top: 1rem;
+	transition: background 0.2s;
+}
+.woocommerce div.product .single_add_to_cart_button:hover {
+	background: linear-gradient(90deg,#d4a373,#a67c52);
+}
 
 
 /*

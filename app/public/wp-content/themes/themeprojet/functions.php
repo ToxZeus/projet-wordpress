@@ -1,4 +1,5 @@
 <?php
+
 // Chargement des assets
 function montheme_enqueue() {
     wp_enqueue_style('montheme-style', get_stylesheet_uri());
@@ -26,8 +27,8 @@ function themeprojet_create_default_pages() {
             'content' => '<h2>À propos</h2><p>Ce site a été réalisé dans le cadre du projet WordPress 3A. Il inclut une boutique WooCommerce, un thème et une extension personnalisés.</p>'
         ],
         [
-            'title' => 'Portfolio',
-            'content' => '<h2>Portfolio</h2><p>Découvrez nos réalisations.</p>'
+            'title' => 'Mentions légales',
+            'content' => '<h2>Mentions légales</h2><p>Ce site est édité par Groupe Hugo CHICHKINE.<br>Adresse : 123 rue du Projet, 75000 Paris<br>Email : contact@themeprojet.fr<br>Directeur de la publication : H. Chich<br>Hébergeur : Localhost</p>'
         ]
     ];
     foreach ($pages as $page) {
