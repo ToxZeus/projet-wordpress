@@ -1,3 +1,15 @@
+/* Background de la page d'accueil appliqué à Contact et À propos (sélecteurs alternatifs) */
+.page-id-contact, .page-id-about, .page-template-contact, .page-template-about, .page {
+	background: linear-gradient(135deg, #23272b 0%, #2e8fff 60%, #00ffb4 100%);
+}
+/* Background de la page d'accueil appliqué à Contact et À propos */
+.page-contact, .page-about {
+	background: linear-gradient(135deg, #23272b 0%, #2e8fff 60%, #00ffb4 100%);
+}
+/* Background de la page d'accueil appliqué à la boutique */
+.woocommerce-page, .woocommerce {
+	background: linear-gradient(135deg, #23272b 0%, #2e8fff 60%, #00ffb4 100%);
+}
 
 .woocommerce-page .site-main {
 	max-width: 1200px;
@@ -65,7 +77,7 @@
 
 /* Centrage du contenu des pages principales */
 body {
-	background: #181c20;
+	background: linear-gradient(135deg, #23272b 0%, #2e8fff 60%, #00ffb4 100%);
 	font-family: 'Roboto Mono', 'Segoe UI', Arial, sans-serif;
 	color: #e0e6ed;
 	margin: 0;
@@ -223,35 +235,62 @@ footer a:hover {
 }
 
 nav {
-	background: #23272b;
-	box-shadow: 0 2px 8px rgba(46,143,255,0.08);
-	padding: 0;
+	background: linear-gradient(90deg, #23272b 70%, #2e8fff 100%);
+	box-shadow: 0 4px 24px rgba(46,143,255,0.12);
+	padding: 0 32px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 nav ul {
 	display: flex;
-	gap: 24px;
+	gap: 40px;
 	list-style: none;
-	padding: 12px 24px;
+	padding: 0;
 	margin: 0;
 	justify-content: center;
+	height: 100%;
+	align-items: center;
+}
+
+.main-nav .nav-left {
+	display: flex;
+	align-items: center;
+	min-width: 180px;
+}
+.main-nav .nav-center {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.main-nav .nav-right {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	min-width: 180px;
 }
 nav ul li {
 	position: relative;
 }
 nav ul li a {
-	color: #2e8fff;
+	color: #e0e6ed;
 	text-decoration: none;
-	padding: 8px 18px;
-	border-radius: 6px;
-	font-weight: 500;
-	font-size: 1.05rem;
-	transition: background 0.2s, box-shadow 0.2s;
+	padding: 14px 32px;
+	border-radius: 10px;
+	font-weight: 600;
+	font-size: 1.18rem;
+	letter-spacing: 0.5px;
+	transition: background 0.2s, box-shadow 0.2s, color 0.2s, transform 0.2s;
 	display: block;
+	box-shadow: 0 2px 8px rgba(46,143,255,0.08);
 }
 nav ul li a:hover, nav ul li a.active {
-	background: #00ffb4;
+	background: linear-gradient(90deg,#00ffb4,#2e8fff);
 	color: #23272b;
-	box-shadow: 0 2px 8px rgba(0,255,180,0.10);
+	box-shadow: 0 4px 16px rgba(0,255,180,0.18);
+	transform: scale(1.08);
 }
 .container {
 	max-width: 1000px;
@@ -266,7 +305,7 @@ nav ul li a:hover, nav ul li a.active {
 	justify-content: center;
 }
  h1, h2, h3 {
-	color: #2e8fff;
+	color: #181c20;
 	margin-top: 0;
 	font-family: 'Roboto Mono', 'Segoe UI', Arial, sans-serif;
 }
@@ -311,5 +350,4 @@ form label {
 		gap: 10px;
 		padding: 6px 8px;
 	}
-	margin-right: 12px;
 }

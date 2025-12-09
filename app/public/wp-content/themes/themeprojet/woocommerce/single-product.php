@@ -11,6 +11,8 @@ if (have_posts()) :
 		echo '</div>';
 		echo '<div class="product-info">';
 		echo '<p class="price">' . $product->get_price_html() . '</p>';
+		// Ajout du hook pour l'historique de prix et autres plugins
+		do_action('woocommerce_single_product_summary');
 		woocommerce_template_single_add_to_cart();
 		echo '<div class="description">' . apply_filters('the_content', get_the_content()) . '</div>';
 		echo '</div>';
@@ -19,7 +21,7 @@ if (have_posts()) :
 endif;
 get_footer();
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit;
 }
 
 get_header( 'shop' ); ?>
