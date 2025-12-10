@@ -340,14 +340,253 @@ form label {
 	color: #2e8fff;
 }
 @media (max-width: 768px) {
-	.container {
-		padding: 10px;
+	/* Navigation mobile */
+	nav {
+		padding: 0 16px;
+		height: auto;
+		flex-wrap: wrap;
 	}
-	header, footer {
-		padding: 10px 0;
+	.main-nav {
+		width: 100%;
+		flex-direction: column;
+	}
+	.main-nav .nav-left,
+	.main-nav .nav-center,
+	.main-nav .nav-right {
+		min-width: auto;
+		width: 100%;
+	}
+	.main-nav .nav-left {
+		margin-bottom: 12px;
+	}
+	.main-nav .nav-center {
+		margin-bottom: 12px;
 	}
 	nav ul {
-		gap: 10px;
-		padding: 6px 8px;
+		gap: 8px;
+		flex-direction: column;
+		padding: 8px 0;
+		margin: 0;
+	}
+	nav ul li a {
+		padding: 10px 16px;
+		font-size: 0.95rem;
+		text-align: center;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	/* Grille produits : 2 colonnes */
+	.woocommerce ul.products {
+		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+		gap: 20px 16px;
+		padding: 1.5rem 2vw;
+	}
+	.woocommerce ul.products li.product {
+		max-width: 100%;
+		min-width: 140px;
+		padding: 1.2rem 0.8rem;
+	}
+	.woocommerce ul.products li.product img {
+		height: 120px;
+		margin-bottom: 0.8rem;
+	}
+	.woocommerce ul.products li.product .woocommerce-loop-product__title {
+		font-size: 0.95rem;
+	}
+	.woocommerce ul.products li.product .price {
+		font-size: 0.95rem;
+	}
+	.woocommerce ul.products li.product .button {
+		padding: 0.7rem 1.2rem;
+		font-size: 0.9rem;
+		margin-top: 0.8rem;
+	}
+
+	/* Conteneur général */
+	.container {
+		max-width: 100%;
+		padding: 16px;
+		margin: 0;
+	}
+	.centered-section {
+		padding: 20px 16px;
+	}
+
+	/* Formulaires */
+	form input, form textarea {
+		padding: 10px;
+		font-size: 16px; /* Important pour éviter le zoom sur iOS */
+	}
+	form label {
+		font-size: 0.95rem;
+	}
+
+	/* Boutons */
+	button, input[type="submit"], .cta-boutique {
+		padding: 0.8rem 1.5rem;
+		font-size: 0.95rem;
+		width: 100%;
+		max-width: 300px;
+	}
+
+	/* Footer */
+	footer {
+		padding: 16px 8px;
+		font-size: 0.95rem;
+	}
+
+	/* Page content */
+	.page-id-contact, .page-id-about, .page-template-contact, .page-template-about, .page {
+		background: linear-gradient(135deg, #23272b 0%, #2e8fff 60%, #00ffb4 100%);
+		min-height: 100vh;
+	}
+
+	/* Produit single */
+	.product-detail {
+		padding: 16px;
+	}
+	.product-detail h2 {
+		font-size: 1.5rem;
+	}
+	.product-image {
+		width: 100%;
+		max-width: 400px;
+		margin: 0 auto 20px;
+	}
+	.product-info {
+		width: 100%;
+	}
+}
+
+/* Petit écran : 480px et moins */
+@media (max-width: 480px) {
+	/* Navigation ultra-mobile */
+	nav {
+		padding: 0 8px;
+	}
+	nav ul li a {
+		padding: 8px 12px;
+		font-size: 0.85rem;
+	}
+
+	/* Grille produits : 1 colonne */
+	.woocommerce ul.products {
+		grid-template-columns: 1fr;
+		gap: 16px;
+		padding: 1rem 1vw;
+	}
+	.woocommerce ul.products li.product {
+		max-width: 100%;
+		min-width: 100%;
+	}
+
+	/* Typography */
+	h1 {
+		font-size: 1.8rem;
+	}
+	h2 {
+		font-size: 1.4rem;
+	}
+	h3 {
+		font-size: 1.1rem;
+	}
+	p, li, a {
+		font-size: 0.95rem;
+	}
+
+	/* Conteneur */
+	.container {
+		padding: 12px;
+	}
+
+	/* Boutons */
+	button, input[type="submit"], .cta-boutique {
+		padding: 0.7rem 1rem;
+		font-size: 0.9rem;
+	}
+
+	/* Formulaires */
+	form label {
+		font-size: 0.9rem;
+	}
+	form input, form textarea {
+		padding: 8px;
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+}
+
+/* Tablette paysage : 768px à 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+	/* Grille produits : 3 colonnes */
+	.woocommerce ul.products {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+		padding: 2rem 3vw;
+	}
+	.woocommerce ul.products li.product {
+		max-width: 100%;
+	}
+
+	/* Navigation */
+	nav {
+		padding: 0 24px;
+	}
+	nav ul li a {
+		padding: 12px 24px;
+		font-size: 1rem;
+	}
+
+	.main-nav .nav-left {
+		min-width: 140px;
+	}
+	.main-nav .nav-right {
+		min-width: 140px;
+	}
+}
+
+/* Desktop : 1025px et plus */
+@media (min-width: 1025px) {
+	/* Grille produits : 4 colonnes */
+	.woocommerce ul.products {
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 40px 32px;
+		padding: 2.5rem 4vw;
+	}
+	.woocommerce ul.products li.product {
+		max-width: 320px;
+	}
+
+	/* Navigation desktop */
+	nav {
+		padding: 0 32px;
+		height: 80px;
+	}
+	nav ul li a {
+		padding: 14px 32px;
+		font-size: 1.18rem;
+	}
+
+	.main-nav .nav-left {
+		min-width: 180px;
+	}
+	.main-nav .nav-right {
+		min-width: 180px;
+	}
+
+	/* Conteneur */
+	.container {
+		max-width: 1000px;
+	}
+}
+
+/* Ultra-large : 1400px et plus */
+@media (min-width: 1400px) {
+	.woocommerce ul.products {
+		max-width: 1400px;
+	}
+	.container {
+		max-width: 1200px;
 	}
 }
